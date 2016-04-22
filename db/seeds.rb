@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+first_president = Question.create(name:"First President", content: "Who was the first president?")
+
+
+first_president.answers.create(content:"George Washington", correct: true)
+first_president.answers.create(content:"Abe Lincoln", correct: false)
+first_president.answers.create(content:"Teddy Roosevelt", correct: false)
+first_president.answers.create(content:"John Kennedy", correct: false)
+
+state_capital = Question.create(name:"Capital of MA", content: "What is the capital of Massachusetts?")
+
+state_capital.answers.create(content:"Boston", correct: true)
+state_capital.answers.create(content:"Worchester", correct: false)
+state_capital.answers.create(content:"Fall River", correct: false)
+state_capital.answers.create(content:"New Bedford", correct: false)

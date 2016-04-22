@@ -1,0 +1,9 @@
+<p>Hello its me.</p>
+<p>Ive been wondering if after all these years youd like to meet.</p>
+<p>You're name is <span><%= session[:name] %></span>
+and you got <span><%= session[:points] %></span>
+out of <span><%= Question.count %></span>.
+</p>
+
+
+<%= link_to "Quiz", newquiz_path %>

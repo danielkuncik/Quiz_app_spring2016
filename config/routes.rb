@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  
+
+  root 'static_pages#home'
+  
+  get 'questions/:id' => 'questions#show'
+  post 'questions/:id' => 'sessions#answer_question'
+  
+  get 'newquiz' => 'sessions#new'
+  post 'newquiz' => 'sessions#create'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
