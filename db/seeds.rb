@@ -20,3 +20,10 @@ state_capital.answers.create(content:"Boston", correct: true)
 state_capital.answers.create(content:"Worcester", correct: false)
 state_capital.answers.create(content:"Fall River", correct: false)
 state_capital.answers.create(content:"New Bedford", correct: false)
+
+scientist = Question.create(name:"Scientist", content: "What scientist invented three famous laws of motion?")
+
+scientist.answers.create(content:"Albert Einstein", correct: false)
+scientist.answers.create(content:"Richard Feynman", correct: false)
+scientist.answers.create(content:"Issac Newton", correct: true)
+scientist.answers.create(content:"Archimedes", correct: false)

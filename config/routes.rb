@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   
   get 'questions/:id' => 'questions#show'
   post 'questions/:id' => 'sessions#answer_question'
+  get 'questions/:id/answerpage' => 'questions#answerpage'
+  post 'questions/:id/answerpage' => 'questions#next_question'
+  
   
   get 'newquiz' => 'sessions#new'
   post 'newquiz' => 'sessions#create'
