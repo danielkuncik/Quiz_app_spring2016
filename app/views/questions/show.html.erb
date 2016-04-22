@@ -1,15 +1,19 @@
 <h3><%= @question.name %></h3>
 <p><%= @question.content %></p>
 
-
-<% y = @question.answers.first.id %>
+<% answer_id_array = @question.answers.ids.shuffle %>
+<% label_array = ["A","B","C","D","E","F","G","H","I","J","K"] %>
+<% j = 0 %>
 
 <%= form_tag do %>
-<% x = y %>
-<% while x < (@question.answers.count + y) %>
-<%= radio_button_tag(:president, @question.answers.find(x).correct) %>
-<%= label_tag(:president, @question.answers.find(x).content) %>
-<% x += 1 %>
+<% for i in answer_id_array do %>
+<%= radio_button_tag(:president, @question.answers.find(i).correct) %>
+<%= label_tag(:president, label_array[j] + ". " + @question.answers.find(i).content) %>
+<br><br>
+<% j += 1 %>
 <% end %>
-<%= submit_tag("answer_question") %>
+<%= submit_tag "Answer" %>
 <% end %>
+
+
+

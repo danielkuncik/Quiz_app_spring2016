@@ -17,6 +17,6 @@ first_president.answers.create(content:"John Kennedy", correct: false)
 state_capital = Question.create(name:"Capital of MA", content: "What is the capital of Massachusetts?")
 
 state_capital.answers.create(content:"Boston", correct: true)
-state_capital.answers.create(content:"Worchester", correct: false)
+state_capital.answers.create(content:"Worcester", correct: false)
 state_capital.answers.create(content:"Fall River", correct: false)
 state_capital.answers.create(content:"New Bedford", correct: false)
