@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'newquiz' => 'sessions#new'
   post 'newquiz' => 'sessions#create'
   
+  get 'error/number_error' => 'error#number_error'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

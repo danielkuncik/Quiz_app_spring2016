@@ -1,11 +1,15 @@
 class QuestionsController < ApplicationController
   
   def show
-    @question = Question.find(params[:id])
-    @answers = @question.answers
+    if session[:question_number] == Integer(params[:id])
+      @question = Question.find(params[:id])
+      @answers = @question.answers
+    else
+      redirect_to '/error/number_error'
+    end
   end
   
-  
+ 
   def answerpage
     @question = Question.find(params[:id])
     answer_array = @question.answers.ids
