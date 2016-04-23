@@ -8,7 +8,7 @@
 
 conduction_convection_radiation_1 = Question.create(
 name:"Conduction Convection Radiation 1",
-content: "Is this conduciton, convection, or radiation:
+content: "Is this conduction, convection, or radiation:
 Electromagnetic waves carry heat energy through space from the sun to the earth."
 )
 
@@ -21,7 +21,7 @@ conduction_convection_radiation_1.answers.create(content:"Evaporation", correct:
 
 conduction_convection_radiation_2 = Question.create(
 name:"Conduction Convection Radiation 2",
-content: "Is this conduciton, convection, or radiation:
+content: "Is this conduction, convection, or radiation:
 An object becomes so hot it turns red and emanates heat in all directions."
 )
 
@@ -34,7 +34,7 @@ conduction_convection_radiation_2.answers.create(content:"Evaporation", correct:
 
 conduction_convection_radiation_3 = Question.create(
 name:"Conduction Convection Radiation 3",
-content: "Is this conduciton, convection, or radiation:
+content: "Is this conduction, convection, or radiation:
 Warm air rises in one location. Cool air falls in another location."
 )
 
@@ -48,7 +48,7 @@ conduction_convection_radiation_3.answers.create(content:"Evaporation", correct:
 
 conduction_convection_radiation_4 = Question.create(
 name:"Conduction Convection Radiation 4",
-content: "Is this conduciton, convection, or radiation:
+content: "Is this conduction, convection, or radiation:
 You put your hand in a mound of snow, and it feels cold."
 )
 
@@ -62,7 +62,7 @@ conduction_convection_radiation_4.answers.create(content:"Evaporation", correct:
 
 conduction_convection_radiation_5 = Question.create(
 name:"Conduction Convection Radiation 5",
-content: "Is this conduciton, convection, or radiation:
+content: "Is this conduction, convection, or radiation:
 The sun heats the equator more than the north pole.
 This causes air to rise at the north pole and move to the equator to fall."
 )
@@ -78,7 +78,7 @@ conduction_convection_radiation_5.answers.create(content:"Evaporation", correct:
 
 conduction_convection_radiation_6 = Question.create(
 name:"Conduction Convection Radiation 6",
-content: "Is this conduciton, convection, or radiation:
+content: "Is this conduction, convection, or radiation:
 Wind, or motion of air around the earth, is caused by this form of heat transfer."
 )
 

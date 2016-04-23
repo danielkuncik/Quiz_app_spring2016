@@ -1,7 +1,11 @@
-<p>Oops! Seems like you ended up on the wrong question!</p>
+<p>Oops! Seems like you ended up in the wrong place!</p>
 <p>Lets get you back on the right track.</p>
 
-
+<% if session[:on_question] %>
 <% good_url = '/questions/' + String(session[:question_number]) %>
+<% else %>
+<% good_url = '/questions/' + String(session[:question_number]) + '/answerpage' %>
+<% end %>
+
 
 <a href = <%=good_url%>>The right track</a>

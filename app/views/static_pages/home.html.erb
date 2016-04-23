@@ -1,5 +1,5 @@
 
-<% if session[:points] != 0 %>
+<% if session[:points] != 0 and session[:points] %>
 <p>You're name is <span><%= session[:name] %></span>
 and you got <span><%= session[:points] %></span>
 out of <span><%= Question.count %></span>.
