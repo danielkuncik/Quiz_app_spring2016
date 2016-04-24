@@ -10,3 +10,7 @@ out of <span><%= Question.count %></span>.
 
 
 <%= link_to "Quiz", newquiz_path %>
+<br><br><br><br>
+<% if session[:points] == Question.count %>
+<%= image_tag("tigger.jpg") %>
+<% end %>
