@@ -90,22 +90,38 @@ conduction_convection_radiation_6.answers.create(content:"Evaporation", correct:
 ##############
 ##############
 
-first_president = Question.create(name:"First President", content: "Who was the first president?")
+ice_cubes = Question.create(name:"Ice Cubes", content: "On a warm summer day,
+you pour yourself a glass of water. It has a temperature of 29 degrees Celsius.
+You throw in 3 ice cubes with a temperature of 0 degrees Celsius.
+Explain how thermal energy moves.")
 
+ice_cubes.answers.create(content:"Heat moves from the ice to the water.", correct: false)
+ice_cubes.answers.create(content:"Cold moves from the ice to the water.", correct: false)
+ice_cubes.answers.create(content:"Heat moves from the water to the ice.", correct: true)
+ice_cubes.answers.create(content:"Cold moves from the water to the ice.", correct: false)
 
-first_president.answers.create(content:"George Washington", correct: true)
-first_president.answers.create(content:"Abe Lincoln", correct: false)
-first_president.answers.create(content:"Teddy Roosevelt", correct: false)
-first_president.answers.create(content:"John Kennedy", correct: false)
 
 ##############
 
-state_capital = Question.create(name:"Capital of MA", content: "What is the capital of Massachusetts?")
+boiling_water = Question.create(name:"Water on stove.", content: "You place a pot of water on the stove.
+You turn on the stove, lighting a flame under the water.
+Explain how heat moves.")
 
-state_capital.answers.create(content:"Boston", correct: true)
-state_capital.answers.create(content:"Worcester", correct: false)
-state_capital.answers.create(content:"Fall River", correct: false)
-state_capital.answers.create(content:"New Bedford", correct: false)
+boiling_water.answers.create(content:"Heat moves from the flame to the water.", correct: true)
+boiling_water.answers.create(content:"Cold moves from the flame to the water.", correct: false)
+boiling_water.answers.create(content:"Heat moves from the water to the flame.", correct: false)
+boiling_water.answers.create(content:"Cold moves from the water to the flame.", correct: false)
+
+###############
+
+hot_rock = Question.create(name:"Hot Rock", content: "A very hot rock with a temperature of 80 degress Celsius
+is thrown into a bowl of room temperature water at 20 degrees Celsius.
+Heat begins to flow from the rock to the water.
+When does heat stop flowing?")
+
+hot_rock.answers.create(content:"When the rock and the water have the same temperature.", correct: true)
+hot_rock.answers.create(content:"When the rock has a lower temperature than the water.", correct: false)
+hot_rock.answers.create(content:"When the water has heated up by 5 degrees.", correct: false)
 
 ##############
 
