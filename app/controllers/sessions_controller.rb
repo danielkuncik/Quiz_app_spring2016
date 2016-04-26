@@ -4,13 +4,19 @@ class SessionsController < ApplicationController
   end
   
   def create
-    session[:name] = params[:name]
-    session[:points] = 0
-    session[:question_number] = 1
-    session[:your_answer] = ""
-    session[:correct_answer] = ""
-    session[:on_question] = true
-    redirect_to '/questions/' + String(session[:question_number])
+    user = User.find_by(name: params[:name])
+    if user && user.authenticate(params[:password])
+      log_in user
+      session[:points] = 0
+      session[:question_number] = 1
+      session[:your_answer] = ""
+      session[:correct_answer] = ""
+      session[:on_question] = true
+      redirect_to '/questions/' + String(session[:question_number])
+    else
+      render "new"
+    end
+
   end
   
   def answer_question

@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   post 'questions/:id/answerpage' => 'questions#next_question'
   
   
-  get 'newquiz' => 'sessions#new'
-  post 'newquiz' => 'sessions#create'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
   
   get 'error/number_error' => 'error#number_error'
   

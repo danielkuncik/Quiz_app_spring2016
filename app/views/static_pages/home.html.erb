@@ -1,6 +1,6 @@
 
 <% if session[:points] != 0 and session[:points] %>
-<p>You're name is <span><%= session[:name] %></span>
+<p>Your name is <span><%= User.find(session[:user_id]).name %></span>
 and you got <span><%= session[:points] %></span>
 out of <span><%= Question.count %></span>.
 </p>
@@ -9,7 +9,7 @@ out of <span><%= Question.count %></span>.
 <% end %>
 
 
-<%= link_to "Quiz", newquiz_path %>
+<%= link_to "Quiz", login_path %>
 <br><br><br><br>
 <% if session[:points] == Question.count %>
 <%= image_tag("tigger.jpg") %>
