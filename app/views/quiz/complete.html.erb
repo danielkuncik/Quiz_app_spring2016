@@ -1,3 +1,13 @@
 
 <p>You took the quiz <span><%= Quiz.find(session[:quiz_id]).name %>.</span></p>
 <p>You got <span><%= session[:points] %> out of <%= Quiz.find(session[:quiz_id]).questions.count %></span> correct.</p>
+
+<% user_link = root_url + 'user/' + String(session[:user_id]) %>
+<br>
+<a href = "<%= user_link %>" >Back to Your Page</a>
+
+<br><br><br><br>
+<% if session[:points] == Quiz.find(session[:quiz_id]).questions.count %>
+<%= image_tag("eeyore.jpg") %>
+<p>You're great at physics, but I'm still sad.</p>
+<% end %>

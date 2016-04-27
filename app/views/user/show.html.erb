@@ -1,0 +1,14 @@
+<p>Hello its me.</p>
+
+<p>
+Your name is <span><%= @user.name %></span>.
+</p>
+
+<h3>Quizes available.</h3>
+
+<ul>
+  <% for i in Quiz.ids %>
+  <% quiz_link = root_url + 'quiz/' + String(i) + '/take' %>
+  <li><a href = "<%=quiz_link%>" ><%= Quiz.find(i).name %> </a> </li>
+  <% end %>
+</ul>

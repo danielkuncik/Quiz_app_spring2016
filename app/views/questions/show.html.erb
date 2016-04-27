@@ -1,4 +1,4 @@
-<h3><%= params[:id] %>. <%= @question.name %></h3>
+<h3><%= @question.name %></h3>
 <p><%= @question.content %></p>
 
 <% answer_id_array = @question.answers.ids.shuffle %>

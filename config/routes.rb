@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'quiz/:id/take' => 'quiz#start_page'
   post 'quiz/:id/take' => 'quiz#take'
   
+  get 'user/:id' => 'user#show'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
