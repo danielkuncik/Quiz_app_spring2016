@@ -1,0 +1,10 @@
+<h3><%= @quiz.name %></h3>
+
+<% question_vector = @quiz.questions.ids %>
+
+<ul>
+  <% for i in question_vector %>
+  <li><%= Question.find(i).name %></li>
+  <li><%= Question.find(i).content %></li>
+  <% end %>
+</ul>

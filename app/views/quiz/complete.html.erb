@@ -1,0 +1,3 @@
+
+<p>You took the quiz <span><%= Quiz.find(session[:quiz_id]).name %>.</span></p>
+<p>You got <span><%= session[:points] %> out of <%= Quiz.find(session[:quiz_id]).questions.count %></span> correct.</p>

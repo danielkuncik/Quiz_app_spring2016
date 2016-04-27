@@ -1,7 +1,8 @@
 class QuestionsController < ApplicationController
   
   def show
-    if session[:question_number] == Integer(params[:id]) and session[:on_question]
+    question_number = session[:question_vector][session[:question_index]]
+    if question_number == Integer(params[:id]) and session[:on_question]
       @question = Question.find(params[:id])
       @answers = @question.answers
     else
@@ -11,7 +12,8 @@ class QuestionsController < ApplicationController
   
  
   def answerpage
-    if session[:question_number] == Integer(params[:id]) and not session[:on_question]
+    question_number = session[:question_vector][session[:question_index]]
+    if question_number == Integer(params[:id]) and not session[:on_question]
       @question = Question.find(params[:id])
       answer_array = @question.answers.ids
       correct_ans = ""
@@ -26,14 +28,6 @@ class QuestionsController < ApplicationController
     end
   end
   
-  def next_question
-    session[:question_number] += 1
-    session[:on_question] = true
-    if session[:question_number] <= Question.count
-      redirect_to '/questions/' + String(session[:question_number])
-    else
-      redirect_to root_url
-    end
-  end
+
 
 end

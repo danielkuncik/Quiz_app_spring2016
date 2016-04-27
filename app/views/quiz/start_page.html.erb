@@ -1,0 +1,7 @@
+
+<h3><%= @quiz.name %></h3>
+<p><%= @quiz.questions.count %> Questions.</p>
+
+<%= form_tag do %>
+<%= submit_tag("Start your quiz!") %>
+<% end %>

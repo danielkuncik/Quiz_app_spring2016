@@ -4,15 +4,21 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   
   get 'questions/:id' => 'questions#show'
-  post 'questions/:id' => 'sessions#answer_question'
+  post 'questions/:id' => 'quiz#answer_question'
   get 'questions/:id/answerpage' => 'questions#answerpage'
-  post 'questions/:id/answerpage' => 'questions#next_question'
+  post 'questions/:id/answerpage' => 'quiz#next_question'
   
   
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   
   get 'error/number_error' => 'error#number_error'
+  get 'quiz/complete' => 'quiz#complete'
+
+  get 'quiz/:id' => 'quiz#show'
+  get 'quiz/:id/take' => 'quiz#start_page'
+  post 'quiz/:id/take' => 'quiz#take'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
