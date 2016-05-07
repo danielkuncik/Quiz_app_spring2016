@@ -51,6 +51,9 @@ class QuizController < ApplicationController
   def complete
   end
   
+  def index
+  end
+  
   #       redirect_to '/questions/' + String(session[:question_number])
 
 end
