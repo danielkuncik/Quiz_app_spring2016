@@ -14,14 +14,20 @@ Rails.application.routes.draw do
   
   get 'error/number_error' => 'error#number_error'
   get 'quiz/complete' => 'quiz#complete'
+  get 'quiz/index' => 'quiz#index'
+  
 
   get 'quiz/:id' => 'quiz#show'
   get 'quiz/:id/take' => 'quiz#start_page'
   post 'quiz/:id/take' => 'quiz#take'
   
+  get 'quiz/:id/delete' => 'quiz#delete'
+  post 'quiz/:id/delete' => 'quiz#kill'
+  
   get 'user/:id' => 'user#show'
   
-  get 'quiz/index' => 'quiz#index'
+  
+  
   
   
   # The priority is based upon order of creation: first created -> highest priority.

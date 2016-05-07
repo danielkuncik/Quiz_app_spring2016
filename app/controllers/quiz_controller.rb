@@ -52,6 +52,27 @@ class QuizController < ApplicationController
   end
   
   def index
+    if not session[:admin]
+      redirect_to root_url
+    end
+  end
+  
+  def delete
+    if not session[:admin]
+      redirect_to root_url
+    end
+    
+    @quiz = Quiz.find(params[:id])
+    
+  end
+  
+  
+  def kill
+    if not session[:admin]
+      redirect_to root_url
+    end
+    Quiz.find(params[:id]).delete
+    redirect_to root_url + 'quiz/index'
   end
   
   #       redirect_to '/questions/' + String(session[:question_number])

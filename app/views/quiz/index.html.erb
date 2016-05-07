@@ -1,0 +1,13 @@
+<h3>All quizes</h3>
+
+<ul>
+<% for i in Quiz.ids %>
+<li>
+  <%= Quiz.find( i ).name %>
+  <a href = <%= root_url + 'quiz/' + String(i) %> >Show Questions</a>
+  <a href = <%= root_url + 'quiz/' + String(i) + '/delete/' %> > Delete Quiz</a>
+  
+
+</li>
+<% end %>
+</ul>

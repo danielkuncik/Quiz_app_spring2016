@@ -5,6 +5,15 @@
 <ul>
   <% for i in question_vector %>
   <li><%= Question.find(i).name %></li>
-  <li><%= Question.find(i).content %></li>
+  <ul>
+    <li><%= Question.find(i).content %></li>
+    <% for a in Question.find(i).answers.ids %>
+      <li><%= Answer.find(a).content %></li>
+    <% end %>
+  </ul>
   <% end %>
 </ul>
+
+<br><br><br>
+
+<a href = <%= root_url + 'quiz/index' %> > Back to Quiz Index</a>

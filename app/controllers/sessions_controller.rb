@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       session[:your_answer] = ""
       session[:correct_answer] = ""
       session[:on_question] = true
+      session[:admin] = true
       redirect_to root_url + 'user/' + String(session[:user_id])
     else
       render "new"
