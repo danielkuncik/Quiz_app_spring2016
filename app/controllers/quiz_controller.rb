@@ -75,6 +75,23 @@ class QuizController < ApplicationController
     redirect_to root_url + 'quiz/index'
   end
   
+  
+  def new
+    if not session[:admin]
+      redirect_to root_url
+    end
+    
+  end
+  
+  def create
+    if not session[:admin]
+      redirect_to root_url
+    end
+    
+    Quiz.create(name: params[:name])
+    redirect_to root_url + 'quiz/index'
+  end
+  
   #       redirect_to '/questions/' + String(session[:question_number])
 
 end

@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'quiz/complete' => 'quiz#complete'
   get 'quiz/index' => 'quiz#index'
   
+  get 'quiz/new' => 'quiz#new'
+  post 'quiz/new' => 'quiz#create'
+  
 
   get 'quiz/:id' => 'quiz#show'
   get 'quiz/:id/take' => 'quiz#start_page'
@@ -25,6 +28,7 @@ Rails.application.routes.draw do
   post 'quiz/:id/delete' => 'quiz#kill'
   
   get 'user/:id' => 'user#show'
+
   
   
   
