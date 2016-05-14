@@ -1,152 +1,79 @@
 
-User0 = User.create(name:"DK",password:"93Number1",password_confirmation:"93Number1")
+User.create(name:"DK",password:"93Number1",password_confirmation:"93Number1")
 
-User1 = User.create(name:"AZ1",password:"91305",password_confirmation:"91305")
-User2 = User.create(name:"BA",password:"54139",password_confirmation:"54139")
-User3 = User.create(name:"MA",password:"19372",password_confirmation:"19372")
-User4 = User.create(name:"IB",password:"50262",password_confirmation:"50262")
-User5 = User.create(name:"FB",password:"97292",password_confirmation:"97292")
-User6 = User.create(name:"BE",password:"38450",password_confirmation:"38450")
-User7 = User.create(name:"QK",password:"74338",password_confirmation:"74338")
-User8 = User.create(name:"RL1",password:"27702",password_confirmation:"27702")
-User9 = User.create(name:"ZO",password:"75709",password_confirmation:"75709")
-User10 = User.create(name:"ZQ",password:"08545",password_confirmation:"08545")
-User11 = User.create(name:"KR",password:"28894",password_confirmation:"28894")
-User12 = User.create(name:"JR",password:"65982",password_confirmation:"65982")
-
-
-User13 = User.create(name:"ZZ",password:"42761",password_confirmation:"42761")
-User14 = User.create(name:"OZ",password:"67335",password_confirmation:"67335")
-User15 = User.create(name:"JA1",password:"61630",password_confirmation:"61630")
-User16 = User.create(name:"AA",password:"74499",password_confirmation:"74499")
-User17 = User.create(name:"QC",password:"34306",password_confirmation:"34306")
-User18 = User.create(name:"IG",password:"72088",password_confirmation:"72088")
-User19 = User.create(name:"RI",password:"93092",password_confirmation:"93092")
-User20 = User.create(name:"RL2",password:"77103",password_confirmation:"77103")
-User21 = User.create(name:"YL",password:"61056",password_confirmation:"61056")
-User22 = User.create(name:"JL",password:"18766",password_confirmation:"18766")
-User23 = User.create(name:"MM",password:"93487",password_confirmation:"93487")
-User24 = User.create(name:"UO",password:"42239",password_confirmation:"42239")
-User25 = User.create(name:"IO",password:"39360",password_confirmation:"39360")
-
-Quiz1 = Quiz.create(name:"31: Conduction, Convection, Radiation")
-#Quiz2 = Quiz.create(name:"32: Thermal Equilibrium and Heat Movement")
-#Quiz3 = Quiz.create(name:"33: Kinetic Theory of Matter")
-Quiz4 = Quiz.create(name:"34: The Heat Equation")
+User.create(name:"AZ1",password:"91305",password_confirmation:"91305")
+User.create(name:"BA",password:"54139",password_confirmation:"54139")
+User.create(name:"MA",password:"19372",password_confirmation:"19372")
+User.create(name:"IB",password:"50262",password_confirmation:"50262")
+User.create(name:"FB",password:"97292",password_confirmation:"97292")
+User.create(name:"BE",password:"38450",password_confirmation:"38450")
+User.create(name:"QK",password:"74338",password_confirmation:"74338")
+User.create(name:"RL1",password:"27702",password_confirmation:"27702")
+User.create(name:"ZO",password:"75709",password_confirmation:"75709")
+User.create(name:"ZQ",password:"08545",password_confirmation:"08545")
+User.create(name:"KR",password:"28894",password_confirmation:"28894")
+User.create(name:"JR",password:"65982",password_confirmation:"65982")
 
 
-Question1 = Quiz4.questions.create(name:"Heat Equation 1", content: "Water has a specific heat of 4184 J/kgC. 
-You have a mass of 2 kg of water.
-You want to heat it from 10 degrees Celsius to 40 degrees Celsius.
-How much heat energy do you need?
-")
+User.create(name:"ZZ",password:"42761",password_confirmation:"42761")
+User.create(name:"OZ",password:"67335",password_confirmation:"67335")
+User.create(name:"JA1",password:"61630",password_confirmation:"61630")
+User.create(name:"AA",password:"74499",password_confirmation:"74499")
+User.create(name:"QC",password:"34306",password_confirmation:"34306")
+User.create(name:"IG",password:"72088",password_confirmation:"72088")
+User.create(name:"RI",password:"93092",password_confirmation:"93092")
+User.create(name:"RL2",password:"77103",password_confirmation:"77103")
+User.create(name:"YL",password:"61056",password_confirmation:"61056")
+User.create(name:"JL",password:"18766",password_confirmation:"18766")
+User.create(name:"MM",password:"93487",password_confirmation:"93487")
+User.create(name:"UO",password:"42239",password_confirmation:"42239")
+User.create(name:"IO",password:"39360",password_confirmation:"39360")
 
-Question1.answers.create(content: "251040 J", correct: true)
-Question1.answers.create(content: "62760 J", correct: false)
-Question1.answers.create(content: "334720 J", correct: false)
-Question1.answers.create(content: "83680 J", correct: false)
+User.create(name:"JA2",password:"37083",password_confirmation:"37083")
+User.create(name:"DA",password:"81308",password_confirmation:"81308")
+User.create(name:"EB",password:"56463",password_confirmation:"56463")
+User.create(name:"AB",password:"85838",password_confirmation:"85838")
+User.create(name:"GF",password:"26490",password_confirmation:"26490")
+User.create(name:"SI",password:"72868",password_confirmation:"72868")
+User.create(name:"ZK",password:"45383",password_confirmation:"45383")
+User.create(name:"GL",password:"09215",password_confirmation:"09215")
+User.create(name:"ZO",password:"62494",password_confirmation:"62494")
+User.create(name:"JQ",password:"96034",password_confirmation:"96034")
+User.create(name:"JR2",password:"32275",password_confirmation:"32275")
+User.create(name:"LR",password:"94692",password_confirmation:"94692")
+User.create(name:"BR",password:"86404",password_confirmation:"86404")
 
-Question2 = Quiz4.questions.create(name:"Heat Equation 2", content: "Silver has a specific heat of 235 J/kgC.
-You have a silver ring with a mass of 0.4 kg. 
-You want to heat it from room temperature at 20 degrees Celsius to 500 degrees Celsius.
-How much heat energy do you need?
-")
+User.create(name:"JZ",password:"82963",password_confirmation:"82963")
+User.create(name:"IA1",password:"78750",password_confirmation:"78750")
+User.create(name:"IA2",password:"61242",password_confirmation:"61242")
+User.create(name:"ZB1",password:"17592",password_confirmation:"17592")
+User.create(name:"ZB2",password:"10554",password_confirmation:"10554")
+User.create(name:"RB",password:"71968",password_confirmation:"71968")
+User.create(name:"ZC",password:"52284",password_confirmation:"52284")
+User.create(name:"CC",password:"39065",password_confirmation:"39065")
+User.create(name:"XC",password:"90973",password_confirmation:"90973")
+User.create(name:"LK",password:"17294",password_confirmation:"17294")
+User.create(name:"ZL",password:"94550",password_confirmation:"94550")
+User.create(name:"FL",password:"69446",password_confirmation:"69446")
+User.create(name:"ZP",password:"27179",password_confirmation:"27179")
+User.create(name:"ZQ",password:"95340",password_confirmation:"95340")
 
-Question2.answers.create(content: "45120 J", correct: true)
-Question2.answers.create(content: "282000 J", correct: false)
-Question2.answers.create(content: "47000 J", correct: false)
-Question2.answers.create(content: "1880 J", correct: false)
-
-
-Question3 = Quiz4.questions.create(name:"Heat Equation 3", content: "I have mass of 4 kg of some mysterious metal.
-I add 500,000 Joules of heat energy, and the temperature of the metal increases by 200 degrees Celsius.
-What is the heat capacity of my metal?
-")
-
-Question3.answers.create(content: "625 J/kgC", correct: true)
-Question3.answers.create(content: "10,000 J/kgC", correct: false)
-Question3.answers.create(content: "2500 J/kgC", correct: false)
-Question3.answers.create(content: "4184 J/kgC", correct: false)
-
-
-Question4 = Quiz4.questions.create(name: "Heat Equation 4", content: "I have mass of 0.5 kg of concrete.
-Concrete has a heat capacity of 880 J/kgC.
-The concrete has an initial temperature of 20 degrees Celsius.
-If I add 3000 Joules of heat energy, what is the final temperature of the concrete?
-")
-
-Question4.answers.create(content: "26.8 degrees Celsius", correct: true)
-Question4.answers.create(content: "21.7 degrees Celsius", correct: false)
-Question4.answers.create(content: "24.2 degrees Celsius", correct: false)
-Question4.answers.create(content: "13.2 degrees Celsius", correct: false)
-
-Question5 = Quiz4.questions.create(name: "Heat Equation 5", content: "I have mass of 3 kg of steel.
-Steel has a heat capacity of 470 J/kgC.
-The Steel has an initial temperature of 15 degrees Celsius.
-If I remove 6000 Joules of heat energy, what is the final temperature of the steel?
-")
-
-Question5.answers.create(content: "19.3 degrees Celsius", correct: false)
-Question5.answers.create(content: "53.3 degrees Celsius", correct: false)
-Question5.answers.create(content: "-23.3 degrees Celsius", correct: false)
-Question5.answers.create(content: "10.7 degrees Celsius ", correct: true)
-
-
-Question6 = Quiz1.questions.create(name: "Conduction, convection, radiation 1", 
-content: "Give an example of heat radiation.")
-
-Question6.answers.create(content: "People warmed while sitting around the campfire.", correct: true)
-Question6.answers.create(content: "Heat transferred to your hand when touching a hot stove.", correct: false)
-Question6.answers.create(content: "The fourth floor of a building is warmer than the other floors.", correct: false)
-Question6.answers.create(content: "Water has a lower temperature than the environment.", correct: false)
-
-Question7 = Quiz1.questions.create(name: "Conduction, convection, radiation 2", 
-content: "Give an example of heat convection.")
-
-Question7.answers.create(content: "People warmed while sitting around the campfire.", correct: false)
-Question7.answers.create(content: "Heat transferred to your hand when touching a hot stove.", correct: false)
-Question7.answers.create(content: "The fourth floor of a building is warmer than the other floors.", correct: true)
-Question7.answers.create(content: "Water has a lower temperature than the environment.", correct: false)
+User.create(name:"NZ",password:"94010",password_confirmation:"94010")
+User.create(name:"ZZ",password:"95425",password_confirmation:"95425")
+User.create(name:"AZ2",password:"04685",password_confirmation:"04685")
+User.create(name:"SZ",password:"28953",password_confirmation:"28953")
+User.create(name:"RA",password:"54687",password_confirmation:"54687")
+User.create(name:"OB",password:"81745",password_confirmation:"81745")
+User.create(name:"AC",password:"99748",password_confirmation:"99748")
+User.create(name:"CL",password:"72759",password_confirmation:"72759")
+User.create(name:"AL",password:"37106",password_confirmation:"37106")
+User.create(name:"AQ",password:"96719",password_confirmation:"96719")
+User.create(name:"KR",password:"12008",password_confirmation:"12008")
+User.create(name:"QU",password:"18493",password_confirmation:"18493")
 
 
-Question8 = Quiz1.questions.create(name: "Conduction, convection, radiation 3", 
-content: "Give an example of heat conduction.")
-
-Question8.answers.create(content: "Heat is transferred through a gamma wave.", correct: false)
-Question8.answers.create(content: "Heat transferred to your hand when touching a hot stove.", correct: true)
-Question8.answers.create(content: "The summer wind blowing in from across the sea.", correct: false)
-Question8.answers.create(content: "Water has a lower temperature than the environment.", correct: false)
-
-
-Question9 = Quiz1.questions.create(name: "Conduction, convection, radiation 4", 
-content: "Give an example of heat radiation.")
-
-Question9.answers.create(content: "Heat is transferred through a gamma wave.", correct: true)
-Question9.answers.create(content: "Heat transferred to your hand when touching a hot stove.", correct: false)
-Question9.answers.create(content: "The summer wind blowing in from across the sea.", correct: false)
-Question9.answers.create(content: "Water has a lower temperature than the environment.", correct: false)
-
-Question10 = Quiz1.questions.create(name: "Conduciton, convection, radiation 5",
-content: "Which type of heat transfer relies upon molecules colliding into other molecules,
-exchanging their kinetic energy?")
-
-Question10.answers.create(content: "Conduction", correct: true)
-Question10.answers.create(content: "Convection", correct: false)
-Question10.answers.create(content: "Radiation", correct: false)
-Question10.answers.create(content: "Evaporation", correct: false)
-
-Question11 = Quiz1.questions.create(name: "Conduciton, convection, radiation 6",
-content: "Water cools because the fastest water molecules become vapor.")
-
-Question11.answers.create(content: "Conduction", correct: false)
-Question11.answers.create(content: "Convection", correct: false)
-Question11.answers.create(content: "Radiation", correct: false)
-Question11.answers.create(content: "Evaporation", correct: true)
-
-Question12 = Quiz1.questions.create(name: "Conduciton, convection, radiation 7",
-content: "If you are ever building a house, where should you place the heaters and air conditioners?")
-
-Question12.answers.create(content: "Both on the ceiling.", correct: false)
-Question12.answers.create(content: "Both on the floor.", correct: false)
-Question12.answers.create(content: "Heaters on the floor and air conditioners on the ceiling.", correct: true)
-Question12.answers.create(content: "Heaters on the ceiling and air conditioners on the floor.", correct: false)
+User.create(name:"XX1",password:"68109",password_confirmation:"68109")
+User.create(name:"XX2",password:"49688",password_confirmation:"49688")
+User.create(name:"XX3",password:"77359",password_confirmation:"77359")
+User.create(name:"XX4",password:"78329",password_confirmation:"78329")
+User.create(name:"XX5",password:"55861",password_confirmation:"55861")

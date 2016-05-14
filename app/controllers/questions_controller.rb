@@ -24,6 +24,7 @@ class QuestionsController < ApplicationController
       end
       @content = correct_ans
     else
+      #redirect_to root_url
       redirect_to '/error/number_error'  
     end
   end

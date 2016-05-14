@@ -1,11 +1,17 @@
 <p>Oops! Seems like you ended up in the wrong place!</p>
 <p>Lets get you back on the right track.</p>
 
+<% question_number = session[:question_vector][session[:question_index]] %>
+
 <% if session[:on_question] %>
-<% good_url = '/questions/' + String(session[:question_number]) %>
+<% good_url = root_url + 'questions/' + String(question_number) %>
 <% else %>
-<% good_url = '/questions/' + String(session[:question_number]) + '/answerpage' %>
+<% good_url = root_url + 'questions/' + String(question_number) + '/answerpage' %>
 <% end %>
 
 
-<a href = <%=good_url%>>The right track</a>
+<a href = "<%=good_url%>">The right track</a>
+
+
+
+

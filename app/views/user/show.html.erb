@@ -2,14 +2,10 @@
 Your name is <span><%= @user.name %></span>.
 </p>
 
-<h3>Quizes available.</h3>
+<h3>Quizes</h3>
 
-<ul>
-  <% for i in Quiz.ids %>
-  <% quiz_link = root_url + 'quiz/' + String(i) + '/take' %>
-  <li><a href = "<%=quiz_link%>" ><%= Quiz.find(i).name %> </a> </li>
-  <% end %>
-</ul>
+<div></div>
+
 
 
 <br><br><br><br>
@@ -18,3 +14,82 @@ Your name is <span><%= @user.name %></span>.
 <% quiz_index_link = root_url + 'quiz/index' %>
 <a href = "<%= quiz_index_link %>" >Quiz Index</a>
 <% end %>
+
+<script>
+  
+  var table_position = document.getElementsByTagName("div")[0];
+  
+  var quiz_table = document.createElement("table");
+  var top_row = document.createElement("tr");
+  var quiz_name_header = document.createElement("th");
+  var quiz_medal_header = document.createElement("th");
+  var quiz_question_header = document.createElement("th");
+  var quiz_link_header = document.createElement("th");
+
+  var quiz_name_header_text = document.createTextNode("Quiz Name");
+  var quiz_medal_header_text = document.createTextNode("Medal Earned");
+  var quiz_question_header_text = document.createTextNode("Questions");
+  var quiz_link_header_text = document.createTextNode("Take Quiz");
+  
+  quiz_name_header.appendChild(quiz_name_header_text);
+  quiz_medal_header.appendChild(quiz_medal_header_text);
+  quiz_question_header.appendChild(quiz_question_header_text);
+  quiz_link_header.appendChild(quiz_link_header_text);
+  
+  top_row.appendChild(quiz_name_header);
+  top_row.appendChild(quiz_medal_header);
+  top_row.appendChild(quiz_question_header);
+  top_row.appendChild(quiz_link_header);
+  quiz_table.appendChild(top_row);
+  
+  <% u = @user.id %>
+  <% for i in Quiz.ids %>
+  <% quiz_link = root_url + 'quiz/' + String(i) + '/take' %>
+  <% medal_grade = Grade.find_by(user_id: @user.id, quiz_id: i) %>
+  <% if medal_grade %>
+    <% medal_score = medal_grade.top_score %>
+    <% if medal_score == 3 %>
+    <% medal = "gold" %>
+    <% elsif medal_score == 2 %>
+    <% medal = "silver" %>
+    <% elsif medal_score == 1 %>
+    <% medal = "bronze" %>
+    <% else %>
+    <% medal = "none" %>
+    <% end %>
+  <% else %>
+  <% medal = "none" %>
+  <% end %>
+
+  next_row = document.createElement("tr");
+  name_cell = document.createElement("td");
+  medal_cell = document.createElement("td");
+  question_cell = document.createElement("td");
+  link_cell = document.createElement("td");
+  
+  name_text = document.createTextNode("<%= Quiz.find(i).name %>")
+  medal_text = document.createTextNode("<%= medal %> ");
+  question_text = document.createTextNode("<%= Quiz.find(i).questions.ids.length %>");
+  
+  link_element = document.createElement("a")
+  link_element.setAttribute("href","<%= quiz_link %>");
+  link_text = document.createTextNode("Take Quiz");
+  link_element.appendChild(link_text);
+  
+  name_cell.appendChild(name_text);
+  medal_cell.appendChild(medal_text);
+  question_cell.appendChild(question_text);
+  link_cell.appendChild(link_element);
+  
+  next_row.appendChild(name_cell);
+  next_row.appendChild(medal_cell);
+  next_row.appendChild(question_cell);
+  next_row.appendChild(link_cell);
+  
+  quiz_table.appendChild(next_row);
+  
+  <% end %>
+  
+  table_position.appendChild(quiz_table);
+  
+</script>

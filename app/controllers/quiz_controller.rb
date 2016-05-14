@@ -18,7 +18,7 @@ class QuizController < ApplicationController
       session[:quiz_id] = params[:id]
       session[:points] = 0
       session[:question_index] = 0
-      session[:question_vector] = @quiz.questions.ids
+      session[:question_vector] = @quiz.questions.ids.shuffle
       session[:your_answer] = ""
       session[:correct_answer] = ""
       session[:on_question] = true
@@ -49,6 +49,30 @@ class QuizController < ApplicationController
   end
   
   def complete
+    points = session[:points]
+    num_questions = session[:question_vector].length
+    percent_correct = Float(points)/Float(num_questions)*100
+    if points == num_questions
+      medal_score = 3
+    elsif percent_correct >= 90 and percent_correct < 100
+      medal_score = 2
+    elsif percent_correct >= 75 and percent_correct < 90
+      medal_score = 1
+    else
+      medal_score = 0
+    end
+    #session[:quiz_id]
+    #session[:user_id]
+    @grade = Grade.find_by(quiz_id: session[:quiz_id], user_id: session[:user_id])
+    if @grade
+      if medal_score > @grade.top_score
+        @grade.top_score = medal_score
+        @grade.save
+      end
+    else
+      Grade.create(quiz_id: session[:quiz_id], user_id: session[:user_id], top_score: medal_score)
+    end
+    
   end
   
   def index
