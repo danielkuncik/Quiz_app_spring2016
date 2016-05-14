@@ -1,0 +1,15 @@
+<h4>Create new answer choice</h4>
+
+<%= form_tag do %>
+<%= label_tag(:content, "Answer Content") %>
+<br><br>
+<%= text_area_tag(:content) %>
+<br><br>
+<%= label_tag(:am_i_right, "Is it correct?") %>
+<br><br>
+<%= check_box_tag(:am_i_right) %>
+<br><br>
+<%= submit_tag("Create Answer Choice") %>
+<% end %>
+
+

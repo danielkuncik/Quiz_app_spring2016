@@ -29,8 +29,18 @@ Rails.application.routes.draw do
   
   get 'user/:id' => 'user#show'
 
+
+  get 'quiz/:id/add_question' => 'questions#new'
+  post 'quiz/:id/add_question' => 'questions#create'
   
+  get 'question/:id/add_answer' => 'answers#new'
+  post 'question/:id/add_answer' => 'answers#create'
   
+  get 'question/:id/delete' => 'questions#delete'
+  post 'question/:id/delete' => 'questions#kill'
+  
+  get 'answer/:id/delete' => 'answers#delete'
+  post 'answer/:id/delete' => 'answers#kill'
   
   
   

@@ -10,3 +10,11 @@ Your name is <span><%= @user.name %></span>.
   <li><a href = "<%=quiz_link%>" ><%= Quiz.find(i).name %> </a> </li>
   <% end %>
 </ul>
+
+
+<br><br><br><br>
+
+<% if session[:admin] %>
+<% quiz_index_link = root_url + 'quiz/index' %>
+<a href = "<%= quiz_index_link %>" >Quiz Index</a>
+<% end %>

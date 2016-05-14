@@ -2,17 +2,39 @@
 
 <% question_vector = @quiz.questions.ids %>
 
+
 <ul>
   <% for i in question_vector %>
+  <% add_answer_link = root_url + 'question/' + String(i) + '/add_answer' %>
+  <% delete_question_link = root_url + 'question/' + String(i) + '/delete' %>
   <li><%= Question.find(i).name %></li>
   <ul>
     <li><%= Question.find(i).content %></li>
     <% for a in Question.find(i).answers.ids %>
-      <li><%= Answer.find(a).content %></li>
+      <% answer_delete_link = root_url + 'answer/' + String(a) + '/delete' %>
+      <li>
+        <% if Answer.find(a).correct %>
+        <font color = "green"><%= Answer.find(a).content %></font>
+        <% else %>
+        <font color = "red"><%= Answer.find(a).content %></font>
+        <% end %>
+      </li>
+      <a href = "<%= answer_delete_link %>">Delete Answer Choice</a>
     <% end %>
+    <li>
+      <a href = "<%= add_answer_link %>">Add Answer Choice</a>
+    </li>
+    <li>
+      <a href = "<%= delete_question_link %>">Delete Question</a>
+    </li>
   </ul>
   <% end %>
 </ul>
+
+<br><br><br>
+
+<% add_question_link = root_url + 'quiz/' + String(@quiz.id) + '/add_question' %>
+<a href = "<%= add_question_link %>">Add Question</a>
 
 <br><br><br>
 

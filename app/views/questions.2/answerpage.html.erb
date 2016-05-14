@@ -1,0 +1,19 @@
+<% if session[:your_answer] == "true" %>
+<p>Your answer was correct!</p>
+<% else %>
+<p>Your answer was wrong.</p>
+<% end %>
+
+<p><%= @question.content %></p>
+<p>The correct answer was: <span><%= @content %></span></p>
+
+<p>So far, you have <span><%= session[:points] %></span> out of <span><%= session[:question_index] +1 %></span> correct.</p>
+
+<%= form_tag do %>
+<% if session[:question_index] + 1 < session[:question_vector].length %>
+  <% message = "Next Question" %>
+<% else %>
+  <% message = "You're Done!" %>
+<% end %>
+<%= submit_tag message %>
+<% end %>
