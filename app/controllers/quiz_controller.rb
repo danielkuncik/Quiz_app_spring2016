@@ -54,12 +54,16 @@ class QuizController < ApplicationController
     percent_correct = Float(points)/Float(num_questions)*100
     if points == num_questions
       medal_score = 3
+      @medal = "gold"
     elsif percent_correct >= 90 and percent_correct < 100
       medal_score = 2
+      @medal = "silver"
     elsif percent_correct >= 75 and percent_correct < 90
       medal_score = 1
+      @medal = "bronze"
     else
       medal_score = 0
+      @medal = "none"
     end
     #session[:quiz_id]
     #session[:user_id]
