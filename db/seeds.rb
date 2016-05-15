@@ -1,5 +1,5 @@
 
-User.create(name:"DK",password:"93Number1",password_confirmation:"93Number1")
+User.create(name:"DK",password:"93Number1",password_confirmation:"93Number1", admin: true)
 
 User.create(name:"AZ1",password:"91305",password_confirmation:"91305")
 User.create(name:"BA",password:"54139",password_confirmation:"54139")

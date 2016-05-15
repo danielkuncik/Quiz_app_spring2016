@@ -76,13 +76,13 @@ class QuizController < ApplicationController
   end
   
   def index
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
   end
   
   def delete
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     
@@ -92,7 +92,7 @@ class QuizController < ApplicationController
   
   
   def kill
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     Quiz.find(params[:id]).delete
@@ -101,14 +101,14 @@ class QuizController < ApplicationController
   
   
   def new
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     
   end
   
   def create
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     

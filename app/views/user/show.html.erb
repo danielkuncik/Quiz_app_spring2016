@@ -6,14 +6,19 @@ Your name is <span><%= @user.name %></span>.
 
 <div></div>
 
+<br><br><br><br>
 
+<% logout_link = root_url + 'logout' %>
+<a href = "<%= logout_link %>">Logout</a>
 
 <br><br><br><br>
 
-<% if session[:admin] %>
+<% if session[:user_id] == 1 %>
 <% quiz_index_link = root_url + 'quiz/index' %>
 <a href = "<%= quiz_index_link %>" >Quiz Index</a>
 <% end %>
+
+
 
 <script>
   

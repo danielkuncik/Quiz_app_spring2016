@@ -1,14 +1,14 @@
 class AnswersController < ApplicationController
   
   def new
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     
   end
   
   def create
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     
@@ -23,14 +23,14 @@ class AnswersController < ApplicationController
   end
   
   def delete
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
   end
 
 
   def kill
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     quiz_id = Question.find(Answer.find(params[:id]).question_id).quiz_id

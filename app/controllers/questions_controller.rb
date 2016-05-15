@@ -30,13 +30,13 @@ class QuestionsController < ApplicationController
   end
   
   def new
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
   end
   
   def create
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     @quiz = Quiz.find(params[:id])
@@ -47,13 +47,13 @@ class QuestionsController < ApplicationController
   end
   
   def delete
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
   end
   
   def kill
-    if not session[:admin]
+    if not session[:user_id] == 1
       redirect_to root_url
     end
     @question = Question.find(params[:id])

@@ -12,11 +12,12 @@ class SessionsController < ApplicationController
       session[:your_answer] = ""
       session[:correct_answer] = ""
       session[:on_question] = true
-      session[:admin] = true
+##      session[:admin] = true
       redirect_to root_url + 'user/' + String(session[:user_id])
     else
       render "new"
     end
+    
 
   end
 
@@ -31,7 +32,12 @@ class SessionsController < ApplicationController
   #  redirect_to '/questions/' + String(session[:question_number]) + '/answerpage'
   #end
   
+  def logout
+  end
+  
   def destroy
+    session[:user_id] = 0
+    redirect_to root_url
   end
   
 end

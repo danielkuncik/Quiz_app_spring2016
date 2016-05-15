@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   
+  get 'logout' => 'sessions#logout'
+  post 'logout' => 'sessions#destroy'
+  
   get 'error/number_error' => 'error#number_error'
   get 'quiz/complete' => 'quiz#complete'
   get 'quiz/index' => 'quiz#index'
