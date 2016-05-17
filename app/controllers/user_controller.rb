@@ -7,4 +7,10 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def index
+    if not session[:user_id] == 1
+      redirect_to root_url
+    end
+  end
+
 end

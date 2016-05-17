@@ -30,10 +30,10 @@ class QuizController < ApplicationController
   def answer_question
     question_number = session[:question_vector][session[:question_index]]
     session[:your_answer] = params[:president]    
-    session[:on_question] = false
-    if session[:your_answer] == "true"
+    if session[:your_answer] == "true" and session[:on_question]
       session[:points] += 1
     end
+    session[:on_question] = false
     redirect_to '/questions/' + String(question_number) + '/answerpage'
   end
   

@@ -15,7 +15,10 @@ Your name is <span><%= @user.name %></span>.
 
 <% if session[:user_id] == 1 %>
 <% quiz_index_link = root_url + 'quiz/index' %>
+<% user_index_link = root_url + 'user/index' %>
 <a href = "<%= quiz_index_link %>" >Quiz Index</a>
+<br>
+<a href = "<%= user_index_link %>" >User Index</a>
 <% end %>
 
 

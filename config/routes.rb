@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'quiz/:id/delete' => 'quiz#delete'
   post 'quiz/:id/delete' => 'quiz#kill'
   
+  get 'user/index' => 'user#index'
   get 'user/:id' => 'user#show'
 
 
