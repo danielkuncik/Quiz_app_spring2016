@@ -5,7 +5,7 @@
 <li><%= User.find(i).name %></li>
 <ul>
   <% for k in Quiz.ids %>
-  <% @grade = Grade.find_by(user_id: i, quiz_id:k) %>
+  <% @grade = Grade.find_by(user_id: i, quiz_id: k) %>
   <% if @grade %>
   <li>
     <%= Quiz.find(k).name %>     
@@ -13,7 +13,7 @@
     Gold
     <% elsif @grade.top_score == 2 %>
     Silver
-    <% elsif @grade.top_scopre == 1 %>
+    <% elsif @grade.top_score == 1 %>
     Bronze
     <% else %>
     Nothing
