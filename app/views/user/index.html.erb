@@ -1,1 +1,27 @@
 <p>Hello its me.</p>
+
+<ul>
+<% for i in User.ids %>
+<li><%= User.find(i).name %></li>
+<ul>
+  <% for k in Quiz.ids %>
+  <% @grade = Grade.find_by(user_id: i, quiz_id:k) %>
+  <% if @grade %>
+  <li>
+    <%= Quiz.find(k).name %>     
+    <% if @grade.top_score == 3 %>
+    Gold
+    <% elsif @grade.top_score == 2 %>
+    Silver
+    <% elsif @grade.top_scopre == 1 %>
+    Bronze
+    <% else %>
+    Nothing
+    <% end %>
+  </li>
+  <% end %>
+  <% end %>
+</ul>
+
+<% end %>
+</ul>
